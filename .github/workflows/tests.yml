@@ -51,7 +51,7 @@ jobs:
 
       - name: Dependency Check
         working-directory: ${{ steps.create-app.outputs.appPath }}
-        run: node /bisonapp/packages/create-bison-app/scripts/dependencySummary
+        run: node ${{ GITHUB_WORKSPACE }}/packages/create-bison-app/scripts/dependencySummary
 
       - name: Upload bison app
         uses: actions/upload-artifact@v2
