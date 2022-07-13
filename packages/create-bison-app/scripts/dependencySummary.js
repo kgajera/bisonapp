@@ -19,7 +19,7 @@ async function createDependencySummary() {
           { data: 'Latest', header: true },
         ],
         ...dependencyNames.map((dep) => [
-          `[${dep}](https://www.npmjs.com/package/${dep})`,
+          `<a href="https://www.npmjs.com/package/${dep}">${dep}</a>`,
           dependencies[dep].current,
           dependencies[dep].latest
         ]),
